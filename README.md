@@ -1,6 +1,8 @@
 # OmegaGenesis
 
-OmegaGenesis is a structural framework for analyzing the Collatz dynamical system through a finite, modular, and auditable architecture.
+Omega-Genesis is a structural reduction framework for the Collatz conjecture based on the compressed odd map
+U(n)=\frac{3n+1}{2^{v_2(3n+1)}}.
+The framework organizes odd dynamics into an entropic membrane, a syntropic contraction regime, and a bounded near-critical residual architecture. The central reduction forces every hypothetical non-convergent odd orbit into one of four residual families S,R,H,C, followed by elimination theorems for those families. This repository contains manuscript sources, figures, proof roadmaps, and bounded finite-core reproducibility code.
 
 ## Key Features
 
