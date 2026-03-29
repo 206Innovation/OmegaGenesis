@@ -1,0 +1,120 @@
+# Omega-Genesis Protocol v12.1
+
+## Compressed Odd Dynamics and a Structural Proof of the Collatz Conjecture
+
+**Author:** Timothy J. Dillon  
+**Organization:** 206 Innovation Inc.  
+**Version:** v12.1  
+**Manuscript:** [Omega_Genesis_v12_1.pdf](https://github.com/206Innovation/OmegaGenesis/Omega_Genesis_v12_1.pdf)
+
+---
+
+## Overview
+
+Omega-Genesis v12.1 presents a structural reduction framework for the Collatz conjecture using the compressed odd map
+
+\[
+U(n)=\frac{3n+1}{2^{v_2(3n+1)}}
+\]
+
+The manuscript develops a reduction-and-closure architecture built on:
+
+- exact entropic persistence,
+- deep-block contraction,
+- segment-model exclusion,
+- shallow-fragmentation control,
+- deep-return dominance,
+- finite near-critical reduction,
+- and final residual-family elimination.
+
+The central claim of the manuscript is that every positive odd orbit under the compressed odd Collatz map reaches 1, and therefore every positive integer reaches the classical Collatz cycle \{1, 2, 4\}.
+
+---
+
+## What Is New in v12.1
+
+This version strengthens the manuscript into a more referee-facing form by:
+
+- tightening the theorem spine,
+- rewriting Sections 4–7 with explicit reduction logic,
+- upgrading the near-critical endgame in Section 8,
+- strengthening Sections 9.6–9.7,
+- clarifying the admissible-core graph argument,
+- and separating the computational appendix from the logical proof structure.
+
+Key improvements include:
+
+- explicit theorem-controlled endgame constants,
+- a formal obstruction-completeness chain,
+- a cleaner cycle-to-template bridge,
+- and a stronger final closure sequence.
+
+---
+
+## Manuscript Structure
+
+### Core Mathematical Components
+
+- **Section 3** — Structural reduction theorem spine  
+- **Section 4** — Deep-block exclusion and quantitative reduction  
+- **Section 5** — Reduction to the shallow residual family  
+- **Section 6** — Light-regime counting and fragmentation reduction  
+- **Section 7** — Deep-return dominance and bounded near-critical core  
+- **Section 8** — Near-critical reduction and global incompatibility  
+- **Section 9** — Final closure and residual-family elimination  
+
+### Appendix
+
+- **Appendix A** — Computational verification and reproducibility  
+  Included as bounded verification and reproducibility support, not as the logical basis of the universal theorem.
+
+---
+
+## Main Ideas
+
+### 1. Compressed Odd Dynamics
+Rather than working directly with the full Collatz map, the manuscript studies the odd-to-odd dynamics through the compressed map \(U\).
+
+### 2. Structural Reduction
+Hypothetical nonconvergent behavior is reduced into a small number of residual families.
+
+### 3. Quantitative Exclusion
+Deep contraction, segment exclusion, and shallow-return analysis eliminate large classes of unresolved behavior.
+
+### 4. Near-Critical Core
+The remaining bounded near-critical regime is encoded as a finite admissible core and shown to be globally incompatible.
+
+### 5. Final Closure
+Once all residual families are eliminated, every positive odd orbit must reach 1.
+
+---
+
+## Repository Purpose
+
+This repository is intended to host:
+
+- the current manuscript,
+- future revisions,
+- proof architecture notes,
+- computational reproducibility materials,
+- and related Omega-Genesis development.
+
+---
+
+## File
+
+- [Omega_Genesis_v12_1.pdf](https://github.com/206Innovation/OmegaGenesis/Omega_Genesis_v12_1.pdf)
+
+---
+
+## Author
+
+**Timothy J. Dillon**  
+206 Innovation Inc.  
+Bellevue, Washington
+
+---
+
+## Note
+
+This release is being shared publicly for mathematical review, scrutiny, and discussion.
