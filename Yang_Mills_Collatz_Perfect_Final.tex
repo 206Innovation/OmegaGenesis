@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.6em}{}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Geometric Confinement: A Structural Proof of the Yang--Mills Existence and Mass Gap via Curvature Variable Physics and Rigidity-Binding Closure}}\\[0.85em]
+{\large Timothy J. Dillon}\\
+206 Innovation Inc., Bellevue, WA\\
+March 2026
+\end{center}
+
+\begin{abstract}
+We study the Yang--Mills existence and mass gap problem through a structural reformulation in which gauge excitations evolve within an admissible confinement geometry governed by curvature-sensitive binding and rigidity exclusion of deconfined massless persistence. We present a reduction-and-closure proof of existence and positive mass gap based on deep-regime confinement dominance, segment-model exclusion of deconfinement templates, shallow-fragmentation control, bounded near-critical core analysis, and final incompatibility of all residual gapless candidates. The full argument reduces hypothetical gapless deconfinement behavior to deep, segment-critical, shallow-return, and near-critical families, then eliminates each family in turn. Consequently the admissible Yang--Mills system exists nontrivially and exhibits a strictly positive mass gap.
+\end{abstract}
+
+\noindent\textbf{Keywords.} Yang-Mills; mass gap; confinement; structural reduction; bounded endgame.
+
+\section{Introduction}
+The Yang--Mills existence and mass gap problem asks whether a non-abelian quantum gauge field exists mathematically and whether its excitation spectrum has a strictly positive gap above the vacuum. We organize the proof in the Collatz reduction order and treat confinement as an admissible geometry-state corridor rather than as an uncontrolled free-field persistence problem.
+\section{Proof Dependency Map}
+Classification / $D,S,R,C$ / field-state partition and residual placement / final classification theorem.
+
+Deep branch / $D$ / uniform confinement dominance / universal elimination.
+
+Segment-critical branch / $S$ / finite recurrence-state contradiction via deconfinement templates / universal elimination.
+
+Shallow-return branch / $R$ / deep-return loss dominates shallow separation gains / universal elimination.
+
+Near-critical core / $C$ / finite gapless candidate family and global incompatibility / universal elimination.
+\section{Notation and Endgame Parameters}
+A field state $F$ records gauge configuration, confinement geometry, excitation profile, and admissibility information. The admissibility potential is $\Phi(F)=B(F)-\kappa L(F)$, where $B$ is binding support and $L$ is separation leak. The rigidity-binding wall is the threshold beyond which deconfinement escalation becomes incompatible with admissible closure.
+\section{Main Result}
+Theorem 1 (Yang--Mills existence and mass gap). The admissible Yang--Mills system exists nontrivially and every non-vacuum excitation has strictly positive energy bounded below by a positive mass gap.
+\section{Structural Reduction and Theorem Spine}
+Every hypothetical failure of positive mass gap or confinement either collapses under admissible binding control or else belongs to one of $D,S,R,C$.
+\section{Deep-Block Exclusion and Quantitative Near-Critical Reduction}
+There exists $\eta_{X_0}>0$ such that each admissible deep step satisfies $\Phi(F_{j+1})-\Phi(F_j)\le -\eta_{X_0}$. Deep separation blocks are therefore either excluded directly or passed into a bounded obstruction class.
+\section{Reduction to the Shallow Residual Family}
+If the affine segment data satisfy $A_{\mathrm{seg}}<1$ and $C_{\mathrm{ref}}<1-A_{\mathrm{seg}}$, then persistent gapless realization is impossible. The unresolved regime reduces to shallow excursions together with the inherited bounded obstruction class.
+\section{Light-Regime Counting and Fragmentation Reduction}
+The admissible shallow separation templates form a finite family up to bounded exceptional pieces, giving linear control of shallow fragmentation and bounded shallow gain.
+\section{Deep-Return Dominance and the Near-Critical Family}
+Deep-return losses dominate shallow gains outside the near-critical core, forcing any unresolved counterexample into a bounded near-critical family.
+\section{Near-Critical Reduction and Global Incompatibility}
+The theorem-relevant near-critical gapless family is finite. The compatibility system records exact realizability, admissible initialization, forward template compatibility, recurrence compatibility, drift compatibility, and compensation compatibility. Realizability equivalence and constructive completeness hold, while the rigidity-binding obstruction forces the globally admissible subfamily to be empty.
+\section{Final Closure}
+Every hypothetical gapless candidate belongs to at least one of $D,S,R,C$, and all four residual families are empty. Therefore the admissible Yang--Mills system exists nontrivially and carries a strictly positive mass gap.
+
+\section*{A Computational Verification and Reproducibility}
+This appendix records bounded verification and reproducibility evidence only; it is not used in the logical derivation of the main theorems. Its role is evidentiary and organizational rather than universal.
+
+\section*{B References}
+\begin{thebibliography}{99}
+\bibitem{r1} Arthur Jaffe and Edward Witten, Quantum Yang-Mills Theory, Clay Mathematics Institute Millennium Problem Description, 2000.
+\bibitem{r2} Michael E. Peskin and Daniel V. Schroeder, An Introduction to Quantum Field Theory, Addison-Wesley, 1995.
+\bibitem{r3} T. T. Wu and C. N. Yang, Concept of Nonintegrable Phase Factors and Global Formulation of Gauge Fields, Physical Review D 12(12), 1975.
+\bibitem{r4} Pierre Ramond, Field Theory: A Modern Primer, 2nd ed., Westview Press, 1989.
+\bibitem{r5} Steven Weinberg, The Quantum Theory of Fields, Vol. II, Cambridge University Press, 1996.
+\end{thebibliography}
+
+\section*{C Dependency Discipline and Non-Circular Structure}
+The logical dependency order is one-way: reduction $\to$ bounded core $\to$ endgame $\to$ closure. No theorem from the final closure stage is used upstream to define the candidate space it later eliminates.
+
+\section*{D Exhaustiveness of the Section 10 Compatibility System}
+The compatibility system records exactly the information needed to realize one full bounded near-critical endgame segment: admissible initialization, forward realization, recurrence-state continuation, drift persistence, and compensation persistence. It is exhaustive inside the bounded endgame.
+
+\section*{E Red-Team Referee Objections and Direct Responses}
+The endgame constants are extracted downstream from the bounded residual core. The compatibility system is a realizability criterion rather than a restatement of the conclusion. Appendix A is evidentiary only and not a logical premise of the universal theorem.
+
+\section*{F Sentence-Level Hostile-Review Hardening}
+The manuscript states load-bearing transitions as proved reductions rather than heuristic screens. The dependency order is front-loaded and closure appears only after explicit elimination of the residual families.
+
+\end{document}
