@@ -1,33 +1,36 @@
-# OmegaGenesis
+# CVP Fusion Overlay — GitHub Publication Set
 
-This release contains the submission version of the manuscript “Compressed Odd Dynamics and a Structural Proof of the Collatz Conjecture.” The paper studies the compressed odd Collatz map and presents a structural reduction framework in which all hypothetical nonconvergent odd orbits are classified into four residual families and then eliminated. The computational appendix is included for bounded verification and reproducibility only and is not part of the logical derivation of the main theorem.
+Author: **Timothy J. Dillon** (206 Innovation Inc.)  
+Date: **2026-05-28**
 
-## Key Features
+This repository contains the publication set for the **Curvature Variable Physics (CVP) Confinement Layer** and the **CVP Fusion Overlay** program:
+- invariant-driven control metrics
+- Controlled-Extension Discipline (local recovery gates)
+- TEVR proof bundles (deterministic replay)
+- canonical equation governance (c vs c_eff; G_geom notation)
 
-- **Four-Family Dynamical Partition**  
-  A complete classification of all odd orbits into S, R, H, and C families.
+## Read order
 
-- **Finite Residue-Graph Core**  
-  A bounded, inspectable model capturing the near-critical region.
+1. **CVP Confinement Layer for Fusion (EqUpdate)** — flagship white paper  
+2. **Fusion Solution Deep Dive (v2)** — technical companion report  
+3. **CVP Fusion Solutions Compendium (P1–P8)** — modules, metrics, TEVR artifacts, roadmap  
+4. **Horizon Modules** — starlifting + black hole energy governance extensions  
+5. **Public narrative essays** — first-person NYT-style short/long
 
-- **Structural Invariants**  
-  Drift, deviation, and valuation geometry used to constrain all possible behaviors.
+## Structure
 
-- **Elimination Ladder**  
-  A step-by-step structural reduction showing how each family collapses.
+- `papers/` — PDFs/DOCX/HTML and GitHub-first markdown abstracts
+- `assets/` — visuals for decks/social
 
-## Purpose
+## Canonical equation panel (locked)
 
-OmegaGenesis reframes the Collatz landscape as a finite elimination problem, offering a clear, structured, and historically informed approach to a long-standing mathematical puzzle.
+- **c** = local invariant causal speed  
+- **c_eff** = f(K, R, ∇K, ∂tK) (curvature-conditioned effective propagation)  
+- **D(c_eff, h, G_geom)** = (δc_eff / δG_geom)|_h (formal Dillon Operator)  
+- **Δ_G c_eff** = c_eff − c  
+- **T_(mu nu) -> G_geom -> c_eff**  
+- Governance: use **G_geom** (or 𝓖); avoid plain **G** for the Dillon Operator.
 
-## Contents
+## Citation
 
-- Canonical documentation  
-- Diagrams and structural models  
-- Explanations of the four-family architecture  
-- Historical and conceptual notes
-
-## License
-
-MIT License (or your preferred license)
-
+See `CITATION.cff`.

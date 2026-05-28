@@ -1,0 +1,152 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue
+}
+
+\newcommand{\cEff}{c_{\mathrm{eff}}}
+\newcommand{\Ggeom}{G_{\mathrm{geom}}}
+\newcommand{\DeltaG}{\Delta_{G}}
+\newcommand{\PiBand}{\Pi}
+
+\title{CVP Confinement Layer for Fusion: Invariant-Driven Control, TEVR Proof Bundles, and Canonical Equation Governance}
+
+\author{\IEEEauthorblockN{Timothy J. Dillon}
+\IEEEauthorblockA{206 Innovation Inc.\\
+Bellevue, Washington, USA\\
+\texttt{tjdillon@msn.com}}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Controlled fusion remains constrained by turbulence-driven transport, MHD instabilities, heat-exhaust limits, and the operational reality that expensive shots demand repeatable progress.
+This paper presents the \emph{CVP Confinement Layer} as a device-agnostic stability and transport control overlay: invariant-driven control metrics, strict local recovery constraints, and TEVR proof bundles (deterministic replay) to validate claimed improvements.
+We also lock canonical equation governance to prevent notation drift: $c$ remains the local invariant causal speed, while $\cEff$ is an effective propagation variable used for curvature-conditioned control and transport modeling under a gravitational-geometric state $\Ggeom$.
+A staged validation plan (Phase A $\rightarrow$ Phase C) and acceptance gates are provided to support partner integration and auditability.
+\end{abstract}
+
+\begin{IEEEkeywords}
+fusion control, plasma stability, transport suppression, robust control, reinforcement learning, diagnostics, reproducibility, TEVR, Curvature Variable Physics
+\end{IEEEkeywords}
+
+\section{Canonical Equation Panel (Locked)}
+\noindent\textbf{Boundary condition.} In this document, $c$ remains locally invariant. $\cEff$ is an \emph{effective} propagation variable used for curvature-conditioned control and transport modeling; it does not assert a global change to local relativity.
+
+\vspace{0.6em}
+\noindent\textbf{Locked forms.}
+\begin{align}
+c &\;=\;\text{local invariant causal speed} \\
+\cEff &\;=\; f\!\left(K, R, \nabla K, \partial_t K\right) \label{eq:ceff}\\
+D(\cEff, h, \Ggeom) &\;=\;\left.\frac{\delta \cEff}{\delta \Ggeom}\right|_{h} \label{eq:operator_formal}\\
+D(\cEff, h, \Ggeom) &\;=\;\left.\frac{\partial \cEff}{\partial \Ggeom}\right|_{h} \label{eq:operator_public}\\
+\DeltaG \cEff &\;=\;\cEff - c \label{eq:delta}\\
+T_{\mu\nu} &\;\rightarrow\; \Ggeom \;\rightarrow\; \cEff \label{eq:chain}
+\end{align}
+\noindent\textbf{Notation governance.} Use $\Ggeom$ (or $\mathcal{G}$) for gravitational geometry; avoid plain $G$ for the Dillon Operator.
+
+\section{Motivation}
+Fusion progress increasingly depends on control: keeping the system inside a narrow corridor where it is stable, performant, and safe for plasma-facing components.
+Modern efforts in learned plasma control, fast differentiable simulation, and virtual diagnostics demonstrate the direction of travel.
+The CVP Confinement Layer is designed to complement these efforts with a governance-first control overlay: stable invariant state, hard constraints, local recovery, and deterministic replay.
+
+\section{CVP Confinement Layer Concept}
+The Confinement Layer is a structured control architecture built on four commitments:
+\begin{enumerate}
+\item \textbf{Invariant-driven state} $I(t)$: robust summaries of machine+plasma configuration that reduce sensitivity to sensor drift and day-to-day changes.
+\item \textbf{Strict local recovery}: actuator-off recovery and weak-perturbation recovery must hold within declared tolerance $\varepsilon$.
+\item \textbf{Actuation families}: waveform/geometry families parameterized by $\theta$ (e.g., bias waveforms, auxiliary modulation) subject to hard limits.
+\item \textbf{TEVR proof bundles}: deterministic provenance from raw traces to metrics and figures.
+\end{enumerate}
+
+\section{Primary Metrics}
+We evaluate control authority using two primary metrics.
+\subsection{Band-limited fluctuation power}
+Compute a power spectral density (PSD) on a selected signal (probe, photodiode proxy, or equivalent). Define
+\begin{equation}
+\PiBand(\theta, I) \;=\; \int_{f_1}^{f_2} \mathrm{PSD}\!\left(f; \theta, I\right)\, df.
+\end{equation}
+A successful actuator reduces $\PiBand$ at fixed baseline setpoints.
+\subsection{Afterglow decay proxy}
+For afterglow tests, fit
+\begin{equation}
+I_{\mathrm{em}}(t) \approx I_0\, e^{-t/\tau(\theta,I)} + b
+\end{equation}
+and compare $\tau$ baseline vs.\ CVP-on under matched conditions.
+
+\section{Symbol Table}
+\begin{table}[t]
+\caption{Symbols (canonical, compact)}
+\centering
+\begin{tabular}{@{}p{0.18\linewidth}p{0.78\linewidth}@{}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning} \\
+\midrule
+$c$ & Local invariant causal speed (boundary condition).\\
+$\cEff$ & Effective propagation variable for control/transport modeling (Eq.\,\ref{eq:ceff}).\\
+$\Ggeom$ & Gravitational-geometric state (notation governance).\\
+$I(t)$ & Invariant-driven control metric vector (device-robust state).\\
+$\theta$ & Actuator waveform parameters (family index + continuous params).\\
+$\PiBand$ & Integrated band-limited fluctuation power.\\
+$\tau$ & Afterglow decay proxy for confinement.\\
+$\varepsilon$ & Declared replay tolerance / recovery tolerance (TEVR).\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{TEVR Acceptance Gates}
+\begin{table}[t]
+\caption{Stage-gated acceptance criteria (TEVR)}
+\centering
+\begin{tabular}{@{}p{0.18\linewidth}p{0.24\linewidth}p{0.54\linewidth}@{}}
+\toprule
+\textbf{Gate} & \textbf{Environment} & \textbf{Acceptance criteria} \\
+\midrule
+A & Phase A testbed & $\PiBand$ reduction and $\tau$ improvement beyond $\varepsilon$; actuator-off and weak-perturbation recovery pass; deterministic replay succeeds.\\
+B & Neutron-visible & Improved neutrons/J with replication; no constraint violations; TEVR evidence progression (E3$\rightarrow$E4).\\
+C & Partner device & Improved stability threshold or confinement KPI; multi-day repeatability; TEVR E4/E5 targets.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Discussion: Why an Overlay}
+Fusion needs not only better performance, but \emph{repeatable convergence}.
+An overlay approach explicitly binds learning-based controllers to safety constraints and recovery obligations, then packages results into replayable evidence.
+This reduces the chance of mistaking drift, tuning artifacts, or one-off operating points for real progress.
+
+\section{Conclusion}
+The CVP Confinement Layer is presented as a governance-first stability and transport control overlay: invariant state, strict local recovery, hard constraints, and TEVR proof bundles.
+The canonical equation panel locks notation drift ($c$ vs.\ $\cEff$; $\Ggeom$ governance) while maintaining local invariance of $c$.
+The next step is Phase A validation in a diagnostic-friendly testbed, followed by staged acceptance gates to neutron-visible and partner-device environments.
+
+\begin{thebibliography}{99}
+
+\bibitem{deepmind_fusion_2025}
+Google DeepMind, ``Bringing AI to the next generation of fusion energy,'' 2025. [Online]. Available: \url{https://deepmind.google/blog/bringing-ai-to-the-next-generation-of-fusion-energy/}
+
+\bibitem{deepmind_tcv_2022}
+Google DeepMind, ``Accelerating fusion science through learned plasma control,'' 2022. [Online]. Available: \url{https://deepmind.google/blog/accelerating-fusion-science-through-learned-plasma-control/}
+
+\bibitem{pppl_diag2diag_2025}
+Princeton Plasma Physics Laboratory, ``New AI enhances view inside fusion energy systems (Diag2Diag),'' 2025. [Online]. Available: \url{https://www.pppl.gov/news/2025/new-ai-enhances-view-inside-fusion-energy-systems}
+
+\bibitem{ut_austin_2025}
+University of Texas at Austin, ``UT-led team solves a big problem for fusion energy,'' 2025. [Online]. Available: \url{https://news.utexas.edu/2025/05/05/university-of-texas-led-team-solves-a-big-problem-for-fusion-energy/}
+
+\end{thebibliography}
+
+\end{document}
